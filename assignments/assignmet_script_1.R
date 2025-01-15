@@ -15,7 +15,7 @@ wide_values = extract_brickman(x, b, form = "wide")
 print(wide_values)
 
 ggplot(data = long_values,
-       mapping = aes(x = month, y = value)) +
+       mapping = aes(x = factor(month, month.abb), y = value)) +
   geom_point() + 
   labs(title = "Temp at buoy M01")
 
